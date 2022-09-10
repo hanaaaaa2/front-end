@@ -1,0 +1,84 @@
+<html>
+<head> 
+<title> Login </title> 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DynaPuff&display=swap" rel="stylesheet">
+<link rel="icon" type="image" href="image0.jpeg">
+<link rel="stylesheet" href="login style.css">
+</head>
+<body> 
+<div id="bodyy">
+<center> <h1> Login </h1></center> 
+<br>
+<div class="vertical-menu">
+    <a href="index.html"> Home </a>
+    <a href="login.html" class="active">Log in</a>
+    <a href="signup.html"> Sign Up</a>
+    <a href="new note.html">Create New Burst</a>
+  </div>
+<div id="div2"> <center> <form action="/register" method="POST" id="login-form"> 
+Email/Username: <br> <input type="text" placeholder="Enter your username"> <br> <br> 
+Password: <br> <input type="password" placeholder="Enter your password"> <br> <br> 
+</form> </center> 
+<center> <button> <a href="new note.html" style="text-decoration:none; color:black;"> Log in </a> </button> </center>
+<center> <p> Don't have an account? <a href="signup.html" id="sign" style="color:yellow;"> Sign up </a> instead. </p></center> </div>
+</div>
+<footer id="footer">
+
+  <div id='grids_footer'>
+
+<div id ='Contact'>
+<center>
+<h2 id="AU">About us</h2>
+    <p> Bursts is a notes application specfically catered to individuals suffering with mental health issues. Write out your Bursts of emotions and watch them disappear 24 hours later, leaving you with a fresh start to your new day.</p>
+  </center>
+</div>
+
+<div id ='About_Us'>
+<center>
+ <h2 id="Con">Contact us</h2>
+ <h4> hanashalabi1@gmail.com </h4>
+ <h4> 079 123 4567 </h4>
+</center>
+    </div>
+
+<div id ='Follow_us'>
+<center>
+<h2>Follow us</h2>
+<h5> GitHub <br> <a href="https://github.com/hanaaaaa2"> hanaaaaa2 </a> </h5>
+<h5> Instagram <br> <a href="https://www.instagram.com/hana__shalabi/"> @hana__shalabi</a> </h5>
+</center>
+</div>
+
+<div id ='End'>
+    <center><p> copyright &copy; Bursts | Hana Shalabi @2022 <br> All Rights Reserved </p></center>
+    </div>
+</div>
+</footer>
+<script> 
+  const form=document.getElementById('login-form');
+  form.addEventListener('submit', registerUser);
+  
+   async function registerUser(event){
+    event.preventDefault()
+    const username=document.getElementById('username').value;
+    const password=document.getElementById('password').value;
+  
+  const result=await fetch('/api/register',{
+      method:'POST',
+      headers:{
+        'Content-Type':'application/json'
+      },
+  body:JSON.stringify({
+    username,
+    password
+  
+  })
+    }).then((res)=>res.json())
+  
+  }
+    
+   </script>
+</body>
+</html>

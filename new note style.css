@@ -1,0 +1,175 @@
+#bodyy{
+min-height:100vh;
+background-image:url('tulips.jfif');
+}
+
+.vertical-menu {
+    width: 100px; 
+    float:left;
+    width:10%;
+  }
+  
+  .vertical-menu a {
+    background-color: #eee; 
+    color: black; 
+    display: block; 
+    padding: 12px; 
+    text-decoration: none; 
+  }
+  
+  .vertical-menu a:hover {
+    background-color: #ccc; 
+  }
+  
+  .vertical-menu a.active {
+    background-color:cadetblue; 
+    color:beige;
+  }
+
+
+
+*{
+  font-family: 'DynaPuff', cursive;
+}
+
+#grids_footer{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+  width:100% ;
+  grid-template-areas: 
+    "box1 box2 box2 box3"
+    "box4 box4 box4 box4" ;
+    height:0;
+    position:absolute;
+    bottom: 0;
+    height: 60px;
+    float:left;
+    
+}
+
+#About_us{
+	grid-area: box1;
+	background-color:grey;
+	border-color: grey;
+}
+
+#Contact{
+	grid-area: box2;
+	background-color: grey;
+	border-color:grey;
+}
+
+#Follow_us{
+grid-area: box3;
+background-color:grey;
+border-color:grey;
+}
+
+#End{
+    height: 9vh;
+	grid-area: box4;
+	background-color:#3F7C88;
+	border-color:#3F7C88;
+	color: black;
+}
+
+#grids_footer h2{
+	color:beige;
+}
+
+#grids_footer p{
+	font-size: 15px;
+}
+
+html,
+body {
+    height: 80%;
+    margin: 0;
+}
+
+.notes {
+    display: flex;
+    height: 60%;
+    float:right;
+}
+
+
+.notes__sidebar {
+    border-right: 2px solid #dddddd;
+    flex-shrink: 0;
+    overflow-y: auto;
+    padding: 1em;
+    width: 250px;
+}
+
+.notes__add {
+    background:cadetblue;
+    border: none;
+    border-radius: 7px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1.25em;
+    font-weight: bold;
+    margin-bottom: 1em;
+    padding: 0.75em 0;
+    width: 100%;
+}
+
+.notes__add:hover {
+    background:#ccc;
+}
+
+.notes__list-item {
+    cursor: pointer;
+}
+
+.notes__list-item--selected {
+    background: #eeeeee;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+.notes__small-title,
+.notes__small-updated {
+    padding: 10px;
+}
+
+.notes__small-title {
+    font-size: 1.2em;
+}
+
+.notes__small-body {
+    padding: 0 10px;
+}
+
+.notes__small-updated {
+    color: #aaaaaa;
+    text-align: right;
+}
+
+.notes__preview {
+    display: flex;
+    flex-direction:column;
+    padding: 2em 3em;
+    flex-grow: 1;
+}
+
+.notes__title,
+.notes__body {
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.notes__title {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.notes__body {
+    flex-grow: 1;
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-top: 2em;
+    resize: none;
+}

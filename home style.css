@@ -1,0 +1,96 @@
+#bodyy{
+  min-height:100vh;
+  background-image:url('c61a07ad3641c3f8b0100b4003a419ab.jpg');
+  }
+
+.vertical-menu {
+    width: 200px; 
+    float:left;
+    width:10%;
+  }
+  
+  .vertical-menu a {
+    background-color: #eee; 
+    color: black; 
+    display: block; 
+    padding: 12px; 
+    text-decoration: none; 
+  }
+  
+  .vertical-menu a:hover {
+    background-color: #ccc; 
+  }
+  
+  .vertical-menu a.active {
+    background-color:cadetblue; 
+    color:beige;
+  }
+
+  *{
+    font-family: 'DynaPuff', cursive;
+  }
+
+  #grids_footer{
+    display: grid;
+grid-template-columns: repeat(4, 1fr);
+  width:100% ;
+  grid-template-areas: 
+    "box1 box2 box2 box3"
+    "box4 box4 box4 box4" ;
+    height:0;
+    position:absolute;
+    bottom: 0;
+    height: 60px;
+    float:left;
+    
+}
+
+#About_us{
+    grid-area: box1;
+    background-color:grey;
+    border-color: grey;
+}
+
+#Contact{
+    grid-area: box2;
+    background-color: grey;
+    border-color:grey;
+}
+
+#Follow_us{
+grid-area: box3;
+background-color:grey;
+border-color:grey;
+}
+
+#End{
+    height: 9vh;
+    grid-area: box4;
+    background-color:#3F7C88;
+    border-color:#3F7C88;
+    color: black;
+}
+
+#grids_footer h2{
+    color:beige;
+}
+
+#grids_footer p{
+    font-size: 15px;
+}
+
+html,
+body {
+    height: 80%;
+    margin: 0;
+}
+
+
+#content{
+float:right;
+}
+
+#divv{
+text-align:center;
+}
+
